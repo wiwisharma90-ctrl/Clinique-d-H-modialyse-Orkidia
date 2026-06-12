@@ -1,0 +1,612 @@
+/* ==========================================================================
+   إعدادات الخطوط والمسافات العامة والأساسية
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #1e6091; /* أزرق طبي مريح */
+    --secondary-color: #16a085; /* أخضر صحي ناعم */
+    --accent-color: #d63384; /* لمسة خفيفة بلون الأوركيد */
+    --dark-bg: #1a252f;
+    --light-bg: #f4f7f9;
+    --text-color: #2c3e50;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* يمنع ظهور أي شريط تمرير عرضي على الهواتف */
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 1. شريط الإعلانات العاجلة */
+.announcement-bar {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 15px;
+    font-size: 14px;
+    text-align: center;
+    flex-wrap: wrap; /* يسمح بنزول النص تحت الشارة في الشاشات الصغيرة */
+}
+
+.announcement-badge {
+    background-color: var(--accent-color);
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.announcement-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* 2. شريط المهام Navbar */
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 12px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* يدعم الهواتف لتفادي الخروج عن الحجم */
+    gap: 15px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-clinic-logo {
+    width: auto;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo-text h1 {
+    font-size: 18px;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.logo-text span {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* يمنع التداخل ويرتب الروابط بسلاسة */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* القائمة المنسدلة للتوعية */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    right: 0;
+    z-index: 100;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--light-bg);
+    color: var(--primary-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.btn-appointment {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 6px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.btn-appointment:hover {
+    background-color: #117a65;
+}
+
+/* 3. القسم الرئيسي Hero */
+.hero-section {
+    padding: 50px 0;
+    background: linear-gradient(135deg, #eef2f7 0%, #dfe6e9 100%);
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h2 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #57606f;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-main, .btn-sub {
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-main {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-sub {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.hero-image-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.clinic-img-card {
+    width: 100%;
+    height: 280px;
+    background-color: #cbd5e1;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.badge-tech {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 4. معلومات سريعة */
+.quick-info {
+    margin-top: -20px;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 30px;
+}
+
+.info-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.info-card {
+    flex: 1;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.info-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* 5. دليل التوعية والمراحل (الجدول والخط الزمني مَرِنان) */
+.health-guide-section {
+    padding: 50px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.timeline-item {
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 6px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.timeline-item h4 {
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.timeline-item p {
+    font-size: 13px;
+}
+
+.danger-zone {
+    background-color: #fff5f5;
+    padding: 25px;
+    border-radius: 8px;
+    border-right: 5px solid #ff4d4d;
+}
+
+.danger-zone h3 {
+    font-size: 18px;
+    color: #c5221f;
+    margin-bottom: 5px;
+}
+
+.sub-text {
+    font-size: 14px;
+    color: #57606f;
+}
+
+.causes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.cause-card {
+    background-color: var(--white);
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+/* 6. قسم التغذية لمرضى الكلى */
+.nutrition-section {
+    padding: 40px 0;
+}
+
+.nutrition-table-container {
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow-x: auto; /* يسمح بالتمرير داخل الجدول الصغير على الهواتف دون تخريب التصميم الخارجي */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px; /* يحافظ على قوام الجدول الداخلي */
+}
+
+.nutrition-table th, .nutrition-table td {
+    padding: 12px 15px;
+    text-align: right;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 14px;
+}
+
+.allowed-header { background-color: #e6f4ea; color: #137333; }
+.forbidden-header { background-color: #fce8e6; color: #c5221f; }
+
+/* 7. نظام نموذج الحجز المستجيب */
+.booking-section {
+    padding: 50px 0;
+    background-color: #edf2f7;
+}
+
+.form-container {
+    background-color: var(--white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    max-width: 700px;
+    width: 100%;
+}
+
+.form-header h2 {
+    font-size: 22px;
+    color: var(--primary-color);
+}
+
+.form-header p {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.file-drop-zone {
+    border: 2px dashed var(--primary-color);
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+    background-color: #f8fafc;
+}
+
+.file-drop-zone input[type="file"] {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.drop-zone-text span {
+    font-size: 14px;
+    display: block;
+}
+
+.drop-zone-text small {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.btn-submit-form {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit-form:hover {
+    background-color: #144366;
+}
+
+.success-box {
+    text-align: center;
+    padding: 25px;
+    background-color: #e6f4ea;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.hidden { display: none; }
+
+/* 8. الفوتر والروابط */
+.main-footer {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    padding: 25px 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+.social-links {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* ==========================================================================
+   شاشات الهواتف والأجهزة الذكية المتكاملة (Media Queries)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 92%;
+    }
+
+    /* شريط التنقل بالهاتف */
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .nav-link, .dropdown-btn {
+        font-size: 13px;
+    }
+
+    /* الهيرو سيكشن يتحول لعمودي مريح للعين */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .btn-main, .btn-sub {
+        width: 100%; /* تأخذ كامل العرض بالهاتف لسهولة النقر */
+        margin-bottom: 5px;
+    }
+
+    .clinic-img-card {
+        height: 200px;
+    }
+
+    /* بطاقات المعلومات السريعة عمودية */
+    .info-grid {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .quick-info {
+        margin-top: 10px;
+    }
+
+    /* خط المراحل الخمسة يتحول عمودياً بدل التكدس العرضي */
+    .timeline {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .timeline-item {
+        border-bottom: none;
+        border-right: 4px solid var(--accent-color);
+        text-align: right;
+        padding: 12px;
+    }
+
+    /* حقول الاسم واللقب عمودية بالهاتف */
+    .form-group-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    /* ضبط مظهر أي قسم يحتوي على صورتين متجاورتين */
+    div[style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+}

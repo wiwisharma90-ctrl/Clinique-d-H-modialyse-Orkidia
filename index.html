@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كلينيك أوركيد لتصفية الدم وأمراض الكلى - قسنطينة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. شريط الإعلانات العاجلة أعلى الموقع -->
+    <div class="announcement-bar">
+        <span class="announcement-badge">إعلان هام</span>
+        <p class="announcement-text">بداية الفحوصات الطبية مع الدكتور قاسمي يومي الأحد والأربعاء (مؤقتاً) من الساعة 08:00 صباحاً إلى 16:00 مساءً.</p>
+    </div>
+
+    <!-- 2. شريط التنقل (Navbar) -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo-area">
+                <!-- تم استبدال زهرة الأوركيد بـ وسم صورة حقيقي للوغو الخاص بك -->
+                <img src="logo.png" alt="لوغو عيادة أوركيد" class="main-clinic-logo" onerror="this.style.display='none';">
+                <div class="logo-text">
+                    <h1>Clinique Orkidi</h1>
+                    <span>عيادة أوركيد لتصفية الدم</span>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">الرئيسية</a>
+                <a href="about.html" class="nav-link">عن العيادة (من نحن)</a>
+                <a href="#services-section" class="nav-link">التكنولوجيا والخدمات</a>
+                
+                <!-- قائمة منسدلة للدليل الصحي -->
+                <div class="dropdown">
+                    <button class="dropdown-btn">التوعية الصحية ▼</button>
+                    <div class="dropdown-content">
+                        <a href="#stages">مراحل مرض الكلى</a>
+                        <a href="#causes">أسباب الفشل الكلوي</a>
+                        <a href="#nutrition">التغذية السليمة</a>
+                    </div>
+                </div>
+                
+                <a href="#booking" class="btn-appointment">طلب موعد / تسجيل</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 3. القسم الرئيسي (Hero Section) -->
+    <section id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h2>مركز متخصص في تصفية الدم وأمراض الكلى</h2>
+                <p>رعاية طبية آمنة ومخصصة لكل مريض، مُجهزة بأحدث التقنيات الطبية الحديثة وتحت إشراف طاقم طبي مؤهل وعالي الكفاءة.</p>
+                <div class="hero-buttons">
+                    <a href="#booking" class="btn-main">سجل كأول مريض الآن</a>
+                    <a href="about.html" class="btn-sub">اكتشف العيادة وموقعنا</a>
+                </div>
+            </div>
+            <div class="hero-image-area">
+                <!-- صورة داخلية حقيقية للمركز من الداخل تعكس التطور والتعقيم -->
+                <div class="clinic-img-card" style="background-image: url('clinic-inside.png'); background-size: cover; background-position: center;">
+                    <span class="badge-tech">تكنولوجيا حديثة High-Flux</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. أقسام أوقات العمل والمعلومات السريعة -->
+    <section class="quick-info">
+        <div class="container info-grid">
+            <div class="info-card">
+                <h3>🕒 أوقات العمل للعيادة</h3>
+                <p>من السبت إلى الخميس</p>
+                <strong>05:00 صباحاً – 19:00 مساءً</strong>
+            </div>
+            <div class="info-card">
+                <h3>📍 موقع العيادة</h3>
+                <p>قسنطينة - فيلا رقم 56، حي المون (Benchiko)</p>
+                <strong>مفتوحة لاستقبالكم</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. قسم التكنولوجيا والخدمات الطبية المتطورة (تم دمجه هنا بناءً على طلبك) -->
+    <section id="services-section" class="services-inline-section" style="padding: 60px 0; background-color: #fff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>أحدث تكنولوجيا تصفية الدم بالعيادة</h2>
+                <p>نوفر للمرضى في قسنطينة أفضل وأدق مستويات التكنولوجيا الطبية الآمنة</p>
+            </div>
+            
+            <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+                <!-- بطاقة تكنولوجيا الفلتر وبها الصورة المطلوبة -->
+                <div style="flex: 1; min-width: 300px;">
+                    <h3 style="color: #1e6091; margin-bottom: 15px;">🔬 التصفية بالفلتر عالي النفاذية (High-Flux Dialyzer)</h3>
+                    <p style="font-size: 17px; line-height: 1.8; color: #57606f; margin-bottom: 15px;">
+                        تعتمد عيادة أوركيد كلياً على تقنية المرشحات (الفلاتر) عالية النفاذية المتطورة. تعمل هذه التكنولوجيا الحديثة على إزالة السموم والجزئيات الكبيرة من الدم بكفاءة عالية جداً وبأعلى درجات الأمان مقارنة بالفلترة العادية.
+                    </p>
+                    <p style="font-size: 17px; line-height: 1.8; color: #57606f;">
+                        تساعد هذه التكنولوجيا على تقليل الأعراض الجانبية وحماية المريض من المضاعفات الحادة على المدى الطويل، مما يضمن كفاءة طبية وراحة تامة طوال مدة الجلسة.
+                    </p>
+                </div>
+                
+                <!-- مكان وضع صورة جهاز التكنولوجيا الحديثة هاي فلكس -->
+                <div style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
+                    <div style="width: 100%; height: 320px; background-color: #e2e8f0; border-radius: 8px; border: 1px solid #cbd5e1; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                        <img src="high-flux-machine.png" alt="جهاز التصفية عالي النفاذية High-Flux" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none';">
+                        <!-- ملاحظة: لو الصورة مش موجودة بالمجلد سيظهر لون رمادي بديل كإطار للجهاز -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. دليل التوعية الصحي والمراحل -->
+    <section id="stages" class="health-guide-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>الوقاية تبدأ بالوعي: مراحل مرض الكلى المزمن</h2>
+                <p>الفشل الكلوي لا يحدث فجأة، بل يمر بعدة مراحل قبل الوصول لضمور الكليتين</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item"><h4>المرحلة 1</h4><p>تضرر خفيف في الكلى مع وظائف طبيعية</p></div>
+                <div class="timeline-item"><h4>المرحلة 2</h4><p>انخفاض خفيف جداً في وظائف الكلى</p></div>
+                <div class="timeline-item"><h4>المرحلة 3</h4><p>انخفاض متوسط في كفاءة الفلترة وتنقية الدم</p></div>
+                <div class="timeline-item"><h4>المرحلة 4</h4><p>انخفاض حاد وهبوط شديد في وظائف الكلى</p></div>
+                <div class="timeline-item"><h4>المرحلة 5</h4><p>الفشل الكلوي التام الذي يتطلب التصفية الدورية</p></div>
+            </div>
+
+            <!-- أسباب الفشل الكلوي الحاد والصامت -->
+            <div id="causes" class="danger-zone">
+                <h3>السكري وضغط الدم: العدو الأول والخفي للكلى</h3>
+                <p class="sub-text">يؤثران بصمت على وظائف الكليتين دون أعراض واضحة في البداية. المتابعة المنتظمة تحميكم من المضاعفات.</p>
+                
+                <div class="causes-grid">
+                    <div class="cause-card">⚠️ داء السكري وارتفاع ضغط الدم</div>
+                    <div class="cause-card">⚠️ التهابات وأمراض الكلى المزمنة</div>
+                    <div class="cause-card">⚠️ أمراض وراثية (مثل تكيس الكلى)</div>
+                    <div class="cause-card">⚠️ الحصوات والتهابات المسالك البولية المتكررة</div>
+                    <div class="cause-card">⚠️ الإفراط العشوائي في استعمال المسكنات</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. قسم التغذية لمرضى الكلى -->
+    <section id="nutrition" class="nutrition-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>التغذية السليمة لمرضى الكلى</h2>
+                <p>نظامك الغذائي المتوازن يدعم كفاءة العلاج التصفوي ويحميك</p>
+            </div>
+            
+            <div class="nutrition-table-container">
+                <table class="nutrition-table">
+                    <thead>
+                        <tr>
+                            <th class="allowed-header">🟢 أطعمة مناسبة وموصى بها</th>
+                            <th class="forbidden-header">🔴 أطعمة ضارة يجب تجنبها</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>الأطعمة منخفضة البوتاسيوم والصوديوم بعناية</td>
+                            <td>الأغذية الغنية بالبوتاسيوم والفوسفور العالي</td>
+                        </tr>
+                        <tr>
+                            <td>البروتينات المحسوبة بدقة تحت إشراف الطبيب</td>
+                            <td>المعلبات، الموالح، والأطعمة المصنعة كلياً</td>
+                        </tr>
+                        <tr>
+                            <td>الالتزام بحساب كمية السوائل المسموح بها يومياً</td>
+                            <td>الإفراط في شرب السوائل خارج النطاق المسموح</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. نظام حجز المواعيد المتقدم وتصوير بطاقة التعريف -->
+    <section id="booking" class="booking-section">
+        <div class="container form-container">
+            <div class="form-header">
+                <h2>تسجيل المريض وطلب موعد طبي</h2>
+                <p>يرجى ملء البيانات بدقة، وسيتواصل معك الطاقم الطبي فوراً لتأكيد الملف المبدئي.</p>
+            </div>
+
+            <form id="medicalBookingForm">
+                <div class="form-group-row">
+                    <div class="form-group">
+                        <label for="firstName">الاسم الأول:</label>
+                        <input type="text" id="firstName" required placeholder="أدخل الاسم">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">اللقب (العائلة):</label>
+                        <input type="text" id="lastName" required placeholder="أدخل اللقب">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف النشط:</label>
+                    <input type="tel" id="phone" required placeholder="0500000000">
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceType">نوع الخدمة / الرعاية المطلوبة:</label>
+                    <select id="serviceType" required>
+                        <option value="">-- اختر نوع الخدمة --</option>
+                        <option value="dialysis">جلسات تصفية الدم الدورية (Hémodialyse)</option>
+                        <option value="consultation">استشارة طبية مع الدكتور قاسمي</option>
+                        <option value="high-flux">تصفية باستخدام الفلتر عالي النفاذية</option>
+                        <option value="checkup">فحص دوري لوظائف الكلى</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="symptoms">شرح المشكلة الصحية أو الأعراض الحالية:</label>
+                    <textarea id="symptoms" rows="4" placeholder="اكتب هنا ما تشعر به أو أي تفاصيل طبية مفيدة..."></textarea>
+                </div>
+
+                <!-- حقل تصوير أو إرفاق بطاقة التعريف الوطنية -->
+                <div class="form-group file-upload-group">
+                    <label for="idCard">إرفاق أو تصوير بطاقة التعريف الوطنية (مهم جداً):</label>
+                    <div class="file-drop-zone">
+                        <input type="file" id="idCard" accept="image/*, application/pdf" required>
+                        <div class="drop-zone-text">
+                            <span>📷 اضغط هنا لتصوير البطاقة أو رفع الملف</span>
+                            <small id="fileNameDisplay">ولم يتم اختيار أي ملف بعد</small>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit-form">إرسال الطلب وحجز الملف</button>
+            </form>
+
+            <div id="successMessage" class="success-box hidden">
+                <div class="success-icon">✓</div>
+                <h3>تم الحجز واستلام طلبكم بنجاح!</h3>
+                <p>شكراً لثقتكم في عيادة أوركيد. سوف يتواصل معكم قسم الاستقبال والطاقم الطبي هاتفياً في أقرب وقت ممكن لتأكيد الموعد النهائي.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. تذييل الموقع والروابط الاجتماعية (Footer) -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>جميع الحقوق محفوظة © 2026 - عيادة أوركيد لتصفية الدم (Clinique d'Hémodialyse Orkidi)</p>
+            <div class="social-links">
+                <a href="#" class="social-link">📸 Instagram</a>
+                <a href="mailto:contact@cliniqueorchidee.dz" class="social-link">✉️ البريد الإلكتروني</a>
+                <a href="tel:+21331000000" class="social-link">📞 اتصل بنا: 031 XX XX XX</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>
